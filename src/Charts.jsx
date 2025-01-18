@@ -52,7 +52,7 @@ const Charts = () => {
                         ))}
                     </Pie>
                 </PieChart>
-                <div className="absolute bottom-[10.5rem] text-center left-[9.6rem]">
+                <div className="absolute bottom-[10rem] text-center left-[9.6rem]">
                     <p className="text-[#646464] font-semibold text-[14px]">Total</p>
                     <h4 className="text-2xl font-bold">188,245</h4>
                 </div>
