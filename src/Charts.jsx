@@ -1,4 +1,4 @@
-import { PieChart, Pie, Cell } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const data = [
     { name: "Group A", value: 560 },
@@ -39,7 +39,7 @@ const Charts = () => {
                 <PieChart width={350} height={320} className="-rotate-90">
                     <Pie
                         data={data}
-                        cx={140}
+                        cx={170}
                         cy={160}
                         innerRadius={112}
                         outerRadius={120}
@@ -81,20 +81,24 @@ const Charts = () => {
                         <div className="w-[10px] h-[10px] bg-[#ffa601] rounded-full"></div>America
                     </div>
                 </div>
-                <LineChart width={760} className="mt-3 text-[#646464cc]" height={300} data={datas}>
-                    <CartesianGrid strokeDasharray="5 5" stroke="#fff" />
-                    <XAxis dataKey="name" />
-                    <YAxis axisLine={false} ticks={[0, 30, 60, 90, 120, 150]} dataKey="Asia" />
-                    <Tooltip />
-                    <Line
-                        type="monotone"
-                        dataKey="Asia"
-                        stroke="#00b072"
-                        dot={false}
-                        strokeWidth={2}
-                    />
-                    <Line type="monotone" dataKey="Ameica" stroke="#ffa601" dot={false} strokeWidth={2} />
-                </LineChart>
+                <div className="w-full h-[255px]">
+                    <ResponsiveContainer className=''>
+                        <LineChart className="mt-3 text-[#646464cc]" height={300} data={datas}>
+                            <CartesianGrid strokeDasharray="5 5" stroke="#fff" />
+                            <XAxis dataKey="name" />
+                            <YAxis axisLine={false} ticks={[0, 30, 60, 90, 120, 150]} dataKey="Asia" />
+                            <Tooltip />
+                            <Line
+                                type="monotone"
+                                dataKey="Asia"
+                                stroke="#00b072"
+                                dot={false}
+                                strokeWidth={2}
+                            />
+                            <Line type="monotone" dataKey="Ameica" stroke="#ffa601" dot={false} strokeWidth={2} />
+                        </LineChart>
+                    </ResponsiveContainer>
+                </div>
             </div>
         </div >
     );

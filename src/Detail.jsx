@@ -5,10 +5,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-
 // import required modules
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { MdKeyboardArrowRight } from 'react-icons/md';
+import AnimatedCounter from './AnimatedCounter';
+
 
 const Detail = () => {
     return (
@@ -76,7 +77,7 @@ const Detail = () => {
                     <div className='flex items-start gap-x-2 font-semibold text-[14px]'>
                         <img src="https://i.imgur.com/uJD1wD8.png" alt="" /><span>+2.6%</span>
                     </div>
-                    <h3 className='text-4xl font-bold'>18,756</h3>
+                    <h3 className='text-4xl font-bold'><AnimatedCounter start={0} end={18765} duration={3000} /></h3>
                 </div>
                 <img className='w-16' src="https://i.imgur.com/Poybmma.png" alt="" />
             </div>
@@ -86,7 +87,7 @@ const Detail = () => {
                     <div className='flex items-start gap-x-2 font-semibold text-[14px]'>
                         <img src="https://i.imgur.com/uJD1wD8.png" alt="" /><span>+0.2%</span>
                     </div>
-                    <h3 className='text-4xl font-bold'>4,876</h3>
+                    <h3 className='text-4xl font-bold'><AnimatedCounter start={0} end={4876} duration={3000} /></h3>
                 </div>
                 <img className='w-16' src="https://i.imgur.com/CfPFlLB.png" alt="" />
             </div>
@@ -96,7 +97,7 @@ const Detail = () => {
                     <div className='flex items-start gap-x-2 font-semibold text-[14px]'>
                         <img className='w-[1.24rem]' src="https://i.imgur.com/339Qhh5.png" alt="" /><span>-0.1%</span>
                     </div>
-                    <h3 className='text-4xl font-bold'>678</h3>
+                    <h3 className='text-4xl font-bold'><AnimatedCounter start={0} end={678} duration={3000} /></h3>
                 </div>
                 <img className='w-16' src="https://i.imgur.com/BxmCNB1.png" alt="" />
             </div>
